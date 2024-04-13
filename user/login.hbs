@@ -19,9 +19,11 @@
         <div class="login-header">
             <h2 class = "text-center">Login</h2>
             <form action="/login" method="POST">
-                
+                {{#if LoginERROR}}
+                <p class="error" style="color: red;">{{LoginERROR}}</p>
+            {{/if}}
                 <div class="form-group">
-                    <span>Username</span>
+                    <span>Email Address</span>
                     <input type="email" class="form-control" name="Email" placeholder="Enter email">
                 </div>
                 <div class="form-group">
