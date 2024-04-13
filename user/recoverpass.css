@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+section{
+    position: relative;
+    width: 100%;
+    height:100vh;
+    display: flex;
+    align-items: center;
+}
+section .recover-box{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    margin-left: 500px;
+    margin-top: -50px;
+    margin-right: -100px;
+}
+section .recover-box .recover-header{
+    
+    width: 100%;
+}
+section .recover-box .recover-header h2{
+    color: #63a3e8;
+    font-weight: 600;
+    font-size: 2.5em;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    border-bottom: 4px solid #63a3e8;
+    display: inline-block;
+    letter-spacing: 1px;
+    margin-left: 30px;
+    
+}
+section .recover-box .recover-header .form-group{
+    margin-bottom: 20px;
+} 
+section .recover-box .recover-header .form-group label{
+    font-size: 18px;
+    margin-bottom: 5px;
+    display: inline-block;
+    color:#63a3e8;
+    font-weight: 400;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+}
+section .recover-box .recover-header .form-group input{
+    width: 50%;
+    padding: 10px 20px;
+    outline: none;
+    font-weight: 400;
+    border: 1px solid #63a3e8;
+    font-size: 16px;
+    letter-spacing: 1px;
+    color: #63a3e8;
+    background: transparent;
+    border-radius: 30px;
+    display: block;
+}
+section .recover-box .recover-header .submit button{
+    width: 25%;
+    padding: 10px 20px;
+    
+    outline: none;
+    font-weight: 600;
+    border: none;
+    font-size: 16px;
+    letter-spacing: 1px;
+    color: white;
+    background: #63a3e8;
+    border-radius: 30px;
+    cursor: pointer;
+    margin-top: 15px;
+    display: inline-flex;
+    text-align: center;
+    
+
+}
+section .recover-box .recover-header .submit button:hover{
+    background: white;
+    color:#63a3e8;
+}
+section .recover-box .recover-header .link a{
+    background-color: white;
+  color: #63a3e8;
+  border: 2px solid #63a3e8;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius:30px;
+  margin-top: 15px;
+  width: 50%;
+}
+section .recover-box .recover-header .link a:hover{
+    background: #63a3e8;
+    color:white;
+}
+section .recover-box .recover-header .para p{
+    color:#63a3e8;
+    margin-top: 10px;
+    margin-left: -20px;
+}
+
+@media(max-width: 1000px){
+    section{
+        position: relative;
+        width: 100%;
+        min-height:100vh;
+        display: flex;
+        align-items: center;
+    }
+    section .recover-box{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        margin-left: 300px;
+        margin-top: -50px;
+        margin-bottom: 30px;
+        margin-right: -170px;
+        
+    }
+    section .recover-box .recover-header{
+    
+        width: 100%;
+    }
+    section .recover-box .recover-header h2{
+        color: #63a3e8;
+        font-weight: 500;
+        font-size: 2em;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+        border-bottom: 4px solid #63a3e8;
+        display: inline-block;
+        letter-spacing: 1px;
+        margin-left: 15px;
+        
+    }
+    section .recover-box .recover-header .form-group input{
+        width: 60%;
+    }
+    section .recover-box .recover-header .submit button{
+        width: 30%;
+    }
+
+    section .recover-box .recover-header .para p{
+        color:#63a3e8;
+        margin-top: 10px;
+        margin-left: -50px;
+    }
+    section .recover-box .recover-header .link a{
+     width:60%;
+    }
+}
+@media(max-width: 600px)
+{
+    section{
+        position: relative;
+        width: 100%;
+        min-height:100vh;
+        display: flex;
+        align-items: center;
+    }
+    section .recover-box{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        margin-left: 60px;
+        margin-top: 20px;  
+    }
+    section .recover-box .recover-header{
+    
+        width: 100%;
+    }
+    section .recover-box .recover-header h2{
+        color: #63a3e8;
+        font-weight: 600;
+        font-size: 1.5em;
+        text-transform: uppercase;
+        
+        border-bottom: 4px solid #63a3e8;
+        display: inline-block;
+        letter-spacing: 0.5px;
+        margin-left: 30px;
+
+        
+    }
+    section .recover-box .recover-header .form-group input{
+        width: 100%;
+    }
+    section .recover-box .recover-header .submit button{
+        width: 49%;
+    }
+
+    section .recover-box .recover-header .para p{
+        color:#63a3e8;
+        margin-top: 10px;
+        margin-left: -100px;
+        visibility: hidden;
+    }
+    section .recover-box .recover-header .link a{
+     width:100%;
+    }
+
+}
