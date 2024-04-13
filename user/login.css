@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+section{
+    position: relative;
+    width: 100%;
+    height:100vh;
+    display: flex;
+}
+section .imgBx
+{
+    position: relative;
+    width: 50%;
+    height: 100%;
+}
+section .imgBx::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+}
+section .imgBx img{
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+section .login-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    margin-left: 30px;
+}
+section .login-box .login-header{
+    
+    width: 100%;
+}
+section .login-box .login-header h2{
+    color: #63a3e8;
+    font-weight: 600;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    border-bottom: 4px solid #63a3e8;
+    display: inline-block;
+    letter-spacing: 1px;
+}
+section .login-box .login-header .form-group{
+    margin-bottom: 20px;
+} 
+section .login-box .login-header .form-group span{
+    font-size: 16px;
+    margin-bottom: 5px;
+    display: inline-block;
+    color:#63a3e8;
+    font-weight: 300;
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+section .login-box .login-header .form-group input{
+    width: 100%;
+    padding: 10px 20px;
+    outline: none;
+    font-weight: 400;
+    border: 1px solid #63a3e8;
+    font-size: 16px;
+    letter-spacing: 1px;
+    color: #63a3e8;
+    background: transparent;
+    border-radius: 30px;
+}
+section .login-box .login-header .input-submit button{
+    width: 100%;
+    padding: 10px 20px;
+    outline: none;
+    font-weight: 500;
+    border: none;
+    font-size: 16px;
+    letter-spacing: 1px;
+    color: white;
+    background: #63a3e8;
+    border-radius: 30px;
+    cursor: pointer;
+    margin-top: 15px;
+
+}
+section .login-box .login-header .input-submit button:hover{
+    background: white;
+    color:#63a3e8;
+}
+section .login-box .login-header .forgot a{
+    color: #607d8b;
+}
+section .login-box .login-header .recover a{
+    color: #607d8b;
+}
+section .login-box .login-header .recover p{
+    color:#63a3e8;
+}
+@media(max-width: 610px)
+{
+    section .imgBx{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height:100%;
+        visibility: hidden;
+    }
+    
+    section .login-box{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+    }
+    section .login-box .login-header{
+        width:100%;
+        
+        background: rgb(255 255 255 / 0.9);
+        
+    }
+    section .login-box .login-header h2{
+        align-items: center;
+        font-size: 2.8em;
+        letter-spacing: 0.5px;
+        margin-left: 120px;
+    }
+
+}
