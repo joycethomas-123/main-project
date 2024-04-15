@@ -1,0 +1,454 @@
+<head>
+<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <style>
+    .row{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 100px 0;
+    
+}
+.alumni{
+    flex-basis: 70%;
+    position: relative;
+    margin-left: 100px;
+    min-height: 70vh;
+}
+.alumni h2{
+    font-size: 35px;
+    display: flex;
+    margin-top: 50px;
+
+}
+.alumni h3{
+    font-size: 25px;
+    color: #63a3e8;
+    font-weight: 100;
+    margin: 20px 0 10px;
+}
+.alumni ::after{
+    content: '';
+    width: 10px;
+    height: 50%;
+    background: linear-gradient(#fff,#63a3e8);
+    position: absolute;
+    left: -40px;
+    top: -3px;
+    
+}
+.alumni1{
+    position: absolute;
+    flex-basis: 50%;
+    display: flex;
+    align-items: center;
+}
+.alumni1 img{
+    width: 50%;
+    height:40% ;
+    margin-left: 700px;
+    margin-top: -100px;
+}
+.alumni1 .color-box{
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: linear-gradient(#fff,#63a3e8);
+    border-radius: 100px 0px 0px 500px;
+    height: 70%;
+    width: 45%;
+    z-index : -1; 
+}
+.about{
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+    background-color:#fff;
+    margin-top: 25px;
+    
+}
+.row-1{
+    width:100%;
+    padding: 50px 100px;
+}
+.image{
+    width: 30%;
+    float: left; 
+}
+.image img{
+    width: 100%;
+    height: 100%;
+    margin-top: 200px;
+    margin-left:25px;
+    opacity: 0.5;
+}
+
+.content{
+    width:60%;
+    float: left;
+    margin-left: 50px;
+   margin-right: 15px;
+
+}
+.content h1{
+    font-size: 50px;
+    letter-spacing: 3.5px;
+    margin-top: 25px;
+    color: #222;
+    margin-left: -300px;
+    
+}
+.content h2{
+    font-size: 35px;
+    margin-top: 25px;
+    color: #220;
+    letter-spacing: 2.5px;
+    margin-left: -250px;
+}
+.content p{
+    font-size: 25px;
+    margin-top: 15px;
+    line-height: 1.5;
+    text-align: justify;
+}
+.act{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: #63a3e8;
+    margin-top: -50px;
+    width:100%;
+    min-height: 100vh;
+    margin-top: -30px;
+    
+}
+.heading{
+    font-size: 50px;
+    text-align: center;
+    margin-top: -50px;
+    letter-spacing: 2.5px;
+    color:#fff;
+}
+.box1,.box2,.box3{
+    width:300px;
+    height: 320px;
+    background: radial-gradient(circle at top left,transparent 340px,rgba(255,255,255,.3)),radial-gradient(circle at bottom right,transparent 340px, rgba(255,255,255,.3));
+    margin:15px;
+    padding:5px;
+    text-align: center;
+    transition: .3s ease-in-out;
+    color:#fff;
+    margin-top: 45px;
+}
+.box1 i,.box2 i,.box3 i{
+    font-size: 40px;
+    margin-top: 25px;
+}
+.box1 h2,.box2 h2,.box3 h2{
+    margin-top: 30px;
+    line-height: 1.5;
+    font-size: 28px; 
+}
+.box1 p,.box2 p,.box3 p{
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+#contact{
+    background-color: #fff;
+   width: 100%;
+    display: flex;
+    min-height: 100vh;
+    position: relative;
+}
+#contact::after{
+    content:"";
+    position: absolute;
+    top:0;
+    left:0;
+    height: 100%;
+    width: 100%;
+    
+}
+
+.row2{
+   height: 100%;
+    line-height: 1.5;
+    display: flex;
+    margin-top: 50px;
+}
+.contact-info{
+    margin-left: 40px;
+    
+    font-size: 25px;
+    border-radius: 15px 15px 15px 15px;
+    color:#63a3e8;
+
+}
+.contact-info h2{
+    margin-bottom:30px;
+    margin-left: 20px;
+}
+.contact-info-item{
+    display: flex;
+    margin-bottom:30px;
+}
+.contact-info-icon{
+    height: 70px;
+    width:70px;
+    text-align: center;
+}
+.head{
+    position: fixed;
+    width: 100%;
+    margin-top: -100px;
+}
+@media (max-width: 868px){
+.row .alumni{
+        flex-direction: column-reverse;
+        margin: 50px 0;
+    }
+    .image{
+        width: 100%;
+        float: none; 
+    }
+    .image img{
+        margin-top:50px;
+        
+    }
+    .content{
+        width:100%;
+        float: none;
+        margin-left: 18px;
+        margin-right: 15px;
+    }
+    .content h1{
+        font-size: 36px;
+        letter-spacing: 1.5px;
+        margin-top: 27px;
+    }
+    .content h2{
+           font-size: 28px;
+    }
+    .content p{
+        font-size: 19px;
+    }
+    .act{
+        display: inline-block;
+        margin-top: 100px;
+        justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    }
+    .box1,.box2,.box3{
+        margin-left: 270px;
+        
+    }
+    .heading{
+        background-color: #63a3e8;
+        font-size: 35px;
+    }
+    .box1 h2,.box2 h2,.box3 h2{
+        font-size: 23px;
+    }
+  
+}
+@media(max-width: 610px){
+    
+.row{
+        flex-direction: column-reverse;
+        margin: 50px 0;
+        display:block;
+    }
+    .alumni1{
+        flex-direction: column-reverse;
+        flex-basis: 50%;
+        margin-bottom: 50px;
+        display: block;
+    }
+    .alumni1 .controller{
+        width: 40%;
+        visibility: hidden;
+    }
+    .alumni1 .color-box{
+        transform: translateX(-5px) ;
+        visibility: hidden;
+    }
+    .alumni{
+        flex-basis: 50%;
+    }
+    .alumni h2{
+        font-size: 30px;
+        margin-left: 60px;
+    }
+    .alumni h3{
+        font-size: 20px;
+        margin-left: 60px;
+    }
+    .alumni ::after{
+        content: '';
+        width: 10px;
+        height: 35%;
+        background: linear-gradient(#fff,#63a3e8);
+        position: absolute;
+        left: 40px;
+        top: -3px;
+    }
+    .row1{
+        margin-top:-50px;
+    }
+    .image{
+        width: 100%;
+        float: none; 
+    }
+    .image img{
+        margin-top:150px;
+        
+    }
+    .content{
+        width:100%;
+        float: none;
+        margin-left: 18px;
+        margin-right: 15px;
+    }
+    .content h1{
+        font-size: 40px;
+        letter-spacing: 2px;
+        margin-top: 30px;
+        margin-left: 10px;
+    }
+    .content h2{
+           font-size: 30px;
+           margin-left: 28px;
+           letter-spacing: 1px;
+    }
+    .content p{
+        font-size: 18px;
+    }
+    .act{
+        display: inline-block;
+        margin-top: 100px;
+        justify-content: center;
+    align-items: center;
+    }
+    .box1,.box2,.box3{
+        margin-left: 70px;
+    }
+    .heading{
+        background-color: #63a3e8;
+        font-size: 40px;
+    }
+    .box1 h2,.box2 h2,.box3 h2{
+        font-size: 28px;
+    }
+    .contact-info{
+        font-size: 20px;
+        display: inline;
+        margin-left: 10px;
+    }
+    
+}
+
+
+</style>
+</head>
+
+<div class="all">
+<section class="top">
+        <div class="row">
+            <div class="alumni">
+                
+                <h2>ALUMNI RELATION CELL<br>College of Engineering Chengannur</h2>
+                <h3>Official website of Alumni Relations Cell,<br> College of Engineering Chengannur</h3>
+            </div>
+            <div class="alumni1">
+                   <img src="https://arc.ceconline.edu/static/media/arc-logo.84bca8bc.png" class="controller">
+                   <div class="color-box"></div>
+            </div>
+        </div>
+    </section>
+    <section class="about">
+        <div id="about" class="row1">
+            <div class="image">
+                <img src="https://ceconline.edu/wp-content/uploads/2022/07/pic1-01-scaled.jpeg">  
+            </div>
+                <div class="content">
+                    <h1>ABOUT US</h1>
+                    <h2>Welcome to Our Website</h2>
+                    <p>Alumni Relation Cell of the College of Engineering Chengannur was established on July 2011. It mainly focuses on the development of Alumni support to do the continuing development of the institution's academics, research, placements, expansion and renewal of its faculties and providing scholarship and financial support to students.</p>
+                    <p>Alumni Relation Cell works towards ensuring the mutual benefit of the alumni as well as the students. ARC helps the alumni in staying connected to their campus. ARC has been instrumental in organizing the Alumni Meets, Mentorship programme, regular guest lectures by distinguished alumni in the campus.</p>
+                </div>
+            <div class="color-box-1"></div>
+            <div class="color-box-2"></div>
+        </div>
+    </section>
+
+    <section id="activities">
+        <div class="act">
+            <h1 class="heading">ACTIVITIES</h1>
+            <div class="box1">
+                <i class="fa fa-camera-retro"></i>
+                <h2>ARC Inaguration</h2>
+                <p>The Alumni Relation Cell inauguration will take place with giving out the scholarships provided by the alumni members to the students.</p>
+            </div>
+            <div class="box2">
+                <i class="fa fa-graduation-cap"></i>
+                <h2>Scolarship Distribution</h2>
+                <p>Scholarships are given to 10 students of our college annually by our alumni members.</p>
+            </div>
+            <div class="box3">
+                <i class="fa fa-group"></i>
+                <h2>Data Collection of Alumini Members</h2>
+                <p>Continuous collection of data regarding Alumni Members organized according to their batch.</p>
+            </div>
+        </div>
+    </section>
+    <section class="joyce" id="contact">
+        <div class="row2">
+            
+            <div class="contact-info">
+                <h2>GET IN TOUCH</h2>
+                <div class="contact-info-item">
+                    <div class="contact-info-icon">
+                        <i class="fas fa-university"></i>
+                    </div>
+                    <div class="contact-info-content">
+                        <h4>Address</h4>
+                        <p>College of Engineering Chengannur, <br>
+                            Kerala 689121</p>
+                    </div>
+                </div>
+               <div class="contact-info-item">
+                <div class="contact-info-icon">
+                    <i class="fas fa-phone"></i>
+                </div>
+                <div class="contact-info-content">
+                    <h4>Phone</h4>
+                    <p>+91 9447324845</p>
+                </div>
+               </div> 
+               <div class="contact-info-item">
+                <div class="contact-info-icon">
+                    <i class="fas fa-envelope"></i>
+                </div>
+                <div class="contact-info-content">
+                    <h4>Email</h4>
+                    <p>alumnicell@ceconline.edu</p>
+                </div>
+               </div>
+            </div>
+        </div>
+       
+    </section>
+   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> 
+</div>
