@@ -1,0 +1,382 @@
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+
+    .icon-container-chat {
+      position: relative;
+      display: inline-block;
+      width: 60px;
+      height: 50px;
+    }
+
+    .icon-chat {
+      width: 40px;
+      height: 40px;
+      background-color: #3498db;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      font-size: 30px;
+    }
+
+    .badge-chat {
+      position: absolute;
+      height: 25px;
+      width: 25px;
+      top: 0;
+      right: 0;
+      background-color: #e74c3c;
+      color: white;
+      border-radius: 50%;
+      padding: 3px;
+      font-size: 16px;
+    }
+
+    .all_HEADER{
+        position: fixed;
+        width: 100%;
+        z-index: 100;
+        margin-bottom: 500px;
+        background-color: #ffffff;
+
+    }
+    .head1, .head2{
+        color: #63a3e8;
+    }
+    .nav-bar{
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      list-style: none;
+      position: relative;
+      background-color: white;
+      padding: 12px 20px;
+      margin-top: -15px;
+}
+
+.logo img{width:100px;
+float: left;}
+.menu{
+    display:flex;
+    margin-left: 70px;
+    float: right;
+    margin-bottom: -10px;
+}
+.menu li{
+    padding-left: 10px;
+    }
+.menu li a{
+    display: inline-block;
+    text-decoration: none;
+    color: #63a3e8;
+    text-align: center;
+    transition: 0.15s ease-in-out;
+    position:relative;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    
+}
+.menu li a::after {
+    content:"";
+    position: absolute;
+    bottom: 0;
+    left:0;
+    width: 0;
+    height:1px;
+    background-color: var(--color1);
+    transition: 0.15s ease-in-out;
+}
+.menu li a:hover:after{
+    width: 100%;
+    color: #ffffff;
+    background-color: #63a3e8;
+}
+.open-menu , .close-menu{
+    position: absolute;
+    color: #63a3e8;
+    cursor: pointer;
+    font-size: 1.5rem;
+    display: none;
+}
+.open-menu {
+    top: 50%;
+    right:20px;
+    transform: translateY(-50%);
+}
+.close-menu{
+    top:20px;
+    right:20px;
+}
+#check{
+    display:none;
+}
+.logo3{
+    padding-left:100px;
+    color: var(--color1);
+    font-weight: bold;
+    padding-top:0;
+    margin-top: 15px;
+} 
+@media (max-width: 868px){
+    .menu{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 80%;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        z-index: 100;
+        background-color: #63a3e8;
+        transition: all 0.2s ease-in-out;
+    }
+    .menu li{margin-top: 40px;}
+    .menu li a {padding:10px;}
+    .open-menu , .close-menu {display: block;}
+    #check:checked ~ .menu {right: 0;}
+}
+    @media(max-width: 610px){
+       .logo img{
+        margin-left: -10px;
+       } 
+    .logo3 h6{
+        font-size: 0.875em;
+     
+     }
+     .logo3 h3{
+        font-size: 1em;
+     }
+    .menu{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 80%;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        z-index: 100;
+        background-color: #63a3e8;
+        transition: all 0.2s ease-in-out;
+    }
+    
+    .menu li{margin-top: 40px;}
+    .menu li a {padding:10px;}
+
+    
+    .open-menu , .close-menu{
+    position: absolute;
+    color: #63a3e8;
+    cursor: pointer;
+    font-size: 1.5rem;
+    display: none;
+}
+.open-menu {
+    top: 50%;
+    right:20px;
+    transform: translateY(-50%);
+}
+.close-menu{
+    top:20px;
+    right:20px;
+}
+#check{
+    display:none;
+}
+    .open-menu , .close-menu {display: inline-block;background-color: black;}
+    #check:checked ~ .menu {right: 0;}
+    }
+  </style>
+</head>
+
+
+<section class="all_HEADER">
+{{#if showHeader1}}
+<header class="head1">
+       <nav>
+            <ul class="nav-bar">
+                <li class="logo">
+                    <a href="#top"><img src="https://arc.ceconline.edu/static/media/arc-logo.84bca8bc.png" alt="alumni"></a>
+                    <div class="logo3">
+            <h3>Alumni Relation Cell</h3>
+                            <h6>College of Engineering Chengannur</h6>
+                    </div>
+                </li>
+                
+                
+                <input type="checkbox" id="check">
+                <span class="menu">
+                    <li><a href="#about" class="dropdown-item">About</a></li>
+                    <li><a href="#activities" class="dropdown-item">Activities</a></li>
+                    <li><a href="#" class="dropdown-item">Gallery</a></li>
+                    <li><a href="#" class="dropdown-item">Team</a></li>
+                    <li><a href="#contact" class="dropdown-item">Contact</a></li>
+                     {{#if uber}}
+                    <li class="nav-item active innav" style="margin-right: 30px;">
+                        <a class="nav-link" href="/profile" style="font-size: 1.5em;">Profile</a>
+                    </li>
+                    {{/if}}
+                    <label for="check" class="close-menu"><i class="fas fa-times"></i></label>
+                </span>
+                <label for="check" class="open-menu"><i class="fas fa-bars"></i></label>
+            
+                   
+                
+                
+                
+                <div class="dropdown">
+                    <button class="btn btn-primary dropdown-toggle" type="button" id="Account" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        {{#if uber}}
+                        {{uber.Name}}
+                        {{else}}
+                            Account
+                        {{/if}}
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="Account">
+
+                        {{#if uber}}
+                            <a class="dropdown-item" href="/logout">logout</a>
+                        {{else}}
+                            <a class="dropdown-item" href="/login">login</a>
+                        {{/if}}
+            
+                    </div>
+                </div>
+            </ul>
+            </div>
+        </nav>
+        </a>
+    </header>
+    {{/if}}
+
+    {{#if uber}}
+    {{#if showHeader2}}
+    <header class="head2">
+    <nav class="navbar navbar2 navbar-expand-lg navbar-light" style="background-color:#ffffff;">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+            aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <ul class="navbar-nav ml-auto mr-auto mt-2 mt-lg-0" style="display: flex; justify-content: space-between; align-items: flex-start; width: 100%; color:#63a3e8;">
+                <li class="nav-item active">
+                    <a class="nav-link drop_dop" href="/jobportal"><span style="font-weight: bold; color:#63a3e8;">Job-Portal</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link drop_dop" href="/mentorshipportal"><span style="font-weight: bold; color:#63a3e8; ">Mentorship-Portal</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link drop_dop" href="/internshipportal"><span style="font-weight: bold; color:#63a3e8;">Intership-Portal</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link drop_dop" href="/groupchat"><span style="font-weight: bold; color:#63a3e8;">Group-Discussion</span></a>
+                </li>
+                <li class="nav-item active">
+                    <div class="icon-container-chat">
+                        <div class="icon-chat">
+                            <a class="nav-link drop_dop" href="/chatwith"><div class="chat-icon-top">💬</div></a>
+                        <span class="badge-chat">1</span>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link drop_dop" href="/viewNotifications"><i class="fas fa-bell" style="font-size: 24px; color:#63a3e8;"></i></i></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link drop_dop" href="/searchfriends"><i class="fas fa-search " style="font-size: 24px; color:#63a3e8;"></i></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+{{/if}}
+{{/if}}
+
+{{#if showHeader3}}
+<nav style="display: flex; justify-content: space-between;margin-top:0px;" class="navbar navbar2 ">
+    <div style="margin-left: 20px;"><a style="font-size: 17px;font-weight:bolder;color:black;text-decoration:none;" href="/view-other-post">others's posts</a></div>
+    <div>
+        <div style="margin-right: 20px;display:inline-block;"><a style="font-size: 17px;font-weight:bolder;color:black;text-decoration:none;" href="/view-own-post">your posts</a></div>
+        <a href="/add-post" style="display:inline-block;"><button class="button_plus btn ">+</button></a>
+    </div> 
+</nav>
+{{/if}}
+
+
+</section>
+
+{{#if showAdminHeader1}}
+<header class="head1">
+        <nav class="navbar navbar1 navbar-expand-lg navbar-light">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01"
+                aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div style="display: flex; align-items: center;">
+                <div style="display: inline-block;">
+                    <img src="/images/logo.png" style="width: 120px;" alt="Logo">
+                </div>
+                <div style="display: inline-block; margin-left: 20px;">
+                    <p style="font-weight: bold; font-size: 25px;">Alumni Relations Cell</p>
+                    <p>College Of Engineering Chengannur</p>
+                </div>
+            </div>
+
+            
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+                    {{#if uber}}
+                    <li class="nav-item active innav" style="margin-right: 30px;">
+                        <a class="nav-link" href="/profile">Profile</a>
+                    </li>
+                    {{/if}}
+                </ul>
+                
+                
+                <div class="dropdown">
+                    <button class="btn btn-primary dropdown-toggle" type="button" id="Account" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        {{#if aber}}
+                        {{aber.Name}}
+                        {{else}}
+                            Account
+                        {{/if}}
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="Account">
+                        <a class="dropdown-item" href="/admin/adminlogout">logout</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        </a>
+    </header>
+    {{/if}}
+
+
+
+    <section id="team">
+        <div class="cover-container">
+            
+        </div>
+    </section>
+
+    <section id="contact">
+
+    </section>
+
+    <section id="profile">
+
+    </section>
+
+    <section id="about">
+
+    </section>
+
+    
+
